@@ -74,7 +74,7 @@ describe("About Functions", function() {
       return argsArray.join(",");
     }
     
-    expect(returnAllArgs("first", "second", "third")).toBe("first, second, third");
+    expect(returnAllArgs("first", "second", "third")).toBe("first,second,third");
   });
 
   it("should pass functions as values", function () {
@@ -103,10 +103,10 @@ describe("About Functions", function() {
       //An internal comment
       return a * b;
     };
-    expect(multiply.toString()).toBe("function (a, b) { \n"
-      + "//An internal comment \n"
-      + "return a * b; \n"
-    + "}");
+    expect(multiply.toString()).toBe("function (a, b) {
+      //An internal comment
+      return a * b;
+    }");
   });    
 });
  
